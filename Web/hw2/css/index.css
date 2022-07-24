@@ -1,0 +1,110 @@
+.bookshelf {
+	list-style-type: none;
+}
+body {
+	background-color: #3d1500;
+	background-image: url("../images/dark-wood.png");
+	color: #FAEBD7;
+}
+h1 {
+	text-align: center;
+	font-size:  70px;
+	text-shadow: 6px 6px 8px #000000;
+}
+h2 {
+	text-align: center;
+}
+a {
+	color: inherit;
+	text-decoration: none; /* no underline */
+}
+a:hover{
+	color: #4d79ff;
+	text-decoration: underline;
+}
+img {
+	display: inline;
+	max-height: 300px;
+	float: left;
+	margin-right: 10px;
+}
+.longerhead{
+	margin: 0;
+	padding: 0;
+	font-family: Arial, cursive;
+
+/*	border-width: 4px;
+	border-style: solid;
+  	border-color: red; ;*/	
+}
+.description{
+	margin-top: 40px;
+	text-align: justify;
+}
+.desc_foot{
+	text-align: right;
+	font-weight: bold;
+}
+.shelve {
+	background-image: url("../images/shelve_texture.png");
+	background-size: contain;
+	background-color: #3d2518;
+	text-align: center;
+	font-family: Georgia ,cursive;
+	font-style: italic;
+	font-size:  60px;
+	text-shadow: 6px 6px 8px #000000;
+	margin-bottom: 15px;
+}
+.books {
+	display: inline;
+	background-color: #ffe6cc;
+	
+	list-style:none;
+	color: #00001a;
+	font-family: Times New Roman,serif;
+	font-style: italic;
+	font-size:  40px;
+	writing-mode: vertical-lr;
+	background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 230, 204) 20%, rgba(0, 0, 0, 0))
+	/*background: linear-gradient(to right currentColor );*/
+}
+.modal-bg {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+	min-height: 310px;
+    background-color: #ffd9b3;
+    color: #00001a;
+    font-family: Brush Script MT,sans-serif;
+	font-style: italic;
+    font-size: 22px;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.close {
+    color: #1a1a1a;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #aaa;
+    text-decoration: none;
+    cursor: pointer;
+}
