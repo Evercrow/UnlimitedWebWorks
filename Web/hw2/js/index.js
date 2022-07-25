@@ -1,43 +1,44 @@
+//Домашка 3
+let user = prompt("Привет, как тебя зовут?");
+document.getElementsByTagName("h1")[0].textContent=`Добро пожаловать в мой книжный уголок,${user}!`;
+
 // Get the modal
-var modal = document.getElementsByClassName('modal');
+let all_modal = document.getElementsByClassName('modal-bg');
+
+for (const modal of all_modal){
+    
+}
+
+// Cоберем все элементы закрытия модальных окон
+let crosses = document.querySelectorAll(".close");
+
+// Cоберем все элементы открытия модальных окон
+let all_buttons = document.querySelectorAll(".btn");
 
 
-// Get the button that opens the modal
-// var btn = document.getElementById("myBtn");
-// oButton[i].className
-// Get the <span> element that closes the modal
-const crosses = document.querySelectorAll(".close");
-
-const all_buttons = document.querySelectorAll(".books");
-// When the user clicks on the button, open the modal
-// btn.onclick = function() {
-//     modal.style.display = "block";
-// }
+// Вешаем обработчики кликов, чтобы не прописывать каждому вручную onclick
 for (i = 0; i < all_buttons.length; i++) {
     button = all_buttons[i];
     button.addEventListener('click', ShowBook);
     span = crosses[i];
     span.addEventListener('click',CloseBook);
 }
-
-function ShowBook(event) {
-    show_el = document.getElementById(event.id+"-desc");
+// Собираем id модального окна из id кнопки и включаем показ
+function ShowBook() {
+    const show_el = document.getElementById(this.parentElement.id+"-desc");
     show_el.style.display = "block";
 }
 
+//при нажатии отключаем показ модального блока
 function CloseBook() {
-    // close_el = document.getElementById(event.id+"-desc");
-    // show_el.style.display = "none";
-    modal.style.display = "none";
+    this.parentElement.parentElement.style.display='none';
 }
-// // When the user clicks on <span> (x), close the modal
-// span.onclick = function() {
-//     modal.style.display = "none";
-// }
 
-// When the user clicks anywhere outside of the modal, close it
+
+// Если щелкнули вне окна -закрываем. Спасибо  alert() ,всегда можно глянуть что за объект в обработке сейчас.
 window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
+    // alert(event.target);
+    if (event.target.className == "modal-bg") {
+        event.target.style.display = "none";
     }
 }
