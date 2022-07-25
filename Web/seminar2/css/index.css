@@ -1,0 +1,20 @@
+p {
+    font-size: larger;
+}
+html {
+    background-color: cornflowerblue;
+}
+h1 {
+    color: blueviolet;
+}
+a {
+    color: chartreuse
+}
+.block {
+    /*width: 400pt;*/
+    background-color: red;
+    border: 10px solid ;
+    font-size: larger;
+    padding: 10px,20px,10px,300px; /* идем по часовой стрелке */
+    margin: 10px,0px,0px,300px;
+}

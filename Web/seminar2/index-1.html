@@ -1,0 +1,62 @@
+<!--Главная всегда index по названию файла-->
+<!DOCTYPE html>
+<!--указание типа версии документа-->
+<html lang="ru">
+<!--в последнее время обязательно указывают язык-->
+
+<head>
+    <meta charset="utf-8">
+    <!--указание кодировки-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя первая страница</title>
+        <link rel="stylesheet" href="css/index.css">
+    <script type="text/javascript">
+        let a = "-5";
+        alert(-a);
+    </script>
+</head>
+
+<body>
+    <h1 style="color:chocolate;">Всем привет!</h1>
+    <!--На странице должен быть только один, для поисковых ботов-->
+    <h2>Немного обо мне</h2>
+    <p>Здесь я буду рассказывать о своих <em>достижениях</em> в области изучения <strong>HTML</strong> и <b>CSS</b></p>
+    <!--lorem -автогенерация текста для макета страницы, через аббревиатуры Emmet-->
+    <p>Сложно ли учить <strong>HTML</strong>? Возможно.<br>Но если приложить некоторые усилия, то <i><strong>ничего
+                сложного нет.</strong></i> </p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic, illo quisquam ex nostrum fuga porro repellat
+        recusandae quaerat perspiciatis laboriosam consequuntur eum aperiam at, minus repudiandae unde consequatur
+        accusamus? Magnam!</p>
+    <p><a href=http://yandex.ru>спросите у Яндекса</a></p>
+    <hr>
+    <!--horizontal line-->
+    <!--"ul>li*3"+"Tab"-->
+    <ul>Маркированный(неупорядоченный) список
+        <li>Яблоко</li>
+        <li>Апельсин</li>
+        <li>Банан</li>
+    </ul>
+    <ol>Нумерованный(упорядоченный) список
+        <li>Хлеб</li>
+        <li>Молоко</li>
+        <li>Масло</li>
+    </ol>
+    <p><img src="https://avatars.mds.yandex.net/i?id=f3b26f2327324b44187aac2068633ae3-4575688-images-thumbs&n=13"
+            alt="Шторм" width="20%" height="20%">
+        <!--По умолчанию цифра - в пикселях. Можно сразу в процентах. Если указан только один параметр, то картинка автоматически подстраивается с сохранением соотношения-->
+    </p>
+    <p></p>Картинка с абсолютной ссылкой</p>
+    <p><img src="images/Lifou_falaises_Xodre.jpg" alt="Новая каледония" width="300"></p>
+    <p>картинка в относительной ссылкой </p>
+    <div>1</div>
+    <div>2</div> <!--расстягивает  элемент всю ширину(строку), блочный элемент-->
+    <span>1</span>
+    <span>2</span>
+    <span>3</span> <!--расстягивает  элементы на ширину(строку), учитывает соседей span, строчный элемент-->
+    <!--У разных тэгов это значение присвоено, например, <il> - div, <img> -span -->
+    <!--margins только у div-->
+    <div class="block"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet mollitia minima ducimus. Temporibus, veritatis earum eum facere sed quo ipsum accusamus placeat tempore autem quos aspernatur porro fugit ab. Soluta!</p></div>
+</body>
+
+</html>
