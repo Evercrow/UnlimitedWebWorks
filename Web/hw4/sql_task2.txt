@@ -1,0 +1,36 @@
+
+-- создаем
+CREATE TABLE STUDENTS (
+  id INTEGER PRIMARY KEY,
+  name TEXT NOT NULL,
+  age INTEGER NOT NULL,
+  address_id INTEGER NOT NULL
+);
+
+CREATE TABLE ADDRESS (
+  address_id INT auto_increment PRIMARY KEY,
+  city char(64) ,
+  street char(128) ,
+  building TEXT ,
+  room INTEGER
+);
+
+
+-- Заполнение
+INSERT INTO STUDENTS VALUES (01, 'Света', 30, 1);
+INSERT INTO ADDRESS (city,street,building) VALUES ('Москва','Лавочкина','9');
+INSERT INTO STUDENTS VALUES (02, 'Данила', 26, 2);
+INSERT INTO ADDRESS (city) VALUES ('Новосибирск');
+INSERT INTO STUDENTS VALUES (03, 'Татьяна',32,3) ;
+INSERT INTO ADDRESS (city,street) VALUES ('Псков','Церковная');
+INSERT INTO STUDENTS VALUES (04, 'Антон',28,4) ;
+INSERT INTO ADDRESS (city,street,building,room) VALUES ('Москва','Ижорская','15к1','32');
+
+
+
+-- Запросы
+SELECT * From ADDRESS;
+-- простой запрос по возрасту
+SELECT * FROM STUDENTS  WHERE age >= 30;
+-- запрос по городу, через объединение со вторичной таблицей.
+SELECT name,age,city,street,building,room FROM STUDENTS jOIN ADDRESS ON STUDENTS.address_id = ADDRESS.address_id WHERE city  ="Москва";
